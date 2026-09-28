@@ -1,12 +1,18 @@
-import os, sys, math
-x = 10
-def Bad_Function_Name( A, B, C, D, E, F ):
-global x
-l = 1; O = 0
-if A == True:
-if B == False:
-if C == None:
-try: print(eval("A + B")); res = E[0] + F + l + O
-except: pass
-else: return None
-Bad_Function_Name(True, False, None, 1, [2], 3)
+def calculate_value(a, b, c, numbers, value):
+    """Melakukan perhitungan sederhana."""
+    base_value = 10
+    increment = 1
+    offset = 0
+
+    if a and not b and c is None:
+        try:
+            result = numbers[0] + value + increment + offset
+            print(result)
+            return base_value + result
+        except (IndexError, TypeError):
+            return None
+
+    return None
+
+
+calculate_value(True, False, None, [2], 3)
